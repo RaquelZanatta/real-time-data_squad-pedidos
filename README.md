@@ -40,12 +40,34 @@ Lê os dados em tempo real do Event Hub, processa e armazena em Delta Lake.
 ## 💻 Exemplo de Código
 
 [Trecho de Código](code/stream_ingestion_pedidos.py)
+[Trecho de Código usando a opção de ambiente .env ](code/stream_pedido_env.py)
 
 ## 🧩 O que meu código precisa fazer 🧩
 - *1*: *Conectar ao Event hub* (simulado)
 - *2*: *Ler os dados em tempo real* (com Structured Streaming)
 - *3*: *Converter os dados de JSON para colunas*
 - *4*: *Gravar no delta lake* (camada bronze, dados raw)
+
+## 🧪 Execução do Pipeline com Ambiente Configurável
+
+O arquivo [stream_pedidos_env.py](code/stream_pedidos_env.py) mostra uma ingestão real time com PySpark baseada em variáveis de ambiente.
+
+### Configuração via .env
+
+Crie um arquivo .env baseado no modelo [.env.example](.env.example), com os seguintes parâmetros:
+
+- INPUT_PATH: pasta onde os arquivos .json são salvos
+- DELTA_OUTPUT_PATH: caminho do Delta Lake para gravação (modo produção)
+- CHECKPOINT_PATH: caminho para os checkpoints do Spark
+- ENVIRONMENT: define se o pipeline roda em develop (imprime no console) ou prod (salva em Delta)
+
+### Modo 'develop'
+
+Imprime os dados no console, ideal para testes.
+
+### Modo 'prod'
+
+Salva os dados no Delta Lake, particionando por year, month, day com base em InvoiceDate.
 
 ## ⚙️ Stack de Tecnologias
 
