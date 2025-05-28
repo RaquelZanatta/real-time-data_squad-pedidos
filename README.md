@@ -39,9 +39,7 @@ Lê os dados em tempo real do Event Hub, processa e armazena em Delta Lake.
 
 ## 💻 Exemplo de Código
 
-Arquivo stream_ingestao_pedidos.py: exemplo de leitura do Event Hub e gravação em Delta Lake com PySpark.
-
-[.....](code/stream_ingestao_pedidos.py)
+[Trecho de Código](code/stream_ingestion_pedidos.py)
 
 ## 🧩 O que meu código precisa fazer 🧩
 - *1*: *Conectar ao Event hub* (simulado)
