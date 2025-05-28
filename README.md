@@ -56,6 +56,9 @@ Lê os dados em tempo real do Event Hub, processa e armazena em Delta Lake.
 | Armazenamento         | Delta Lake (Bronze, Silver, Gold) | Governança e versionamento |
 | Visualização/Alertas  | Power BI, Azure Monitor   | Pronto para uso em real time |
 
+
+> ⚠️ Ponto de atenção: A ingestão em tempo real utiliza arquivos JSON monitorados por Spark Strutured Streaming. Por padrão, o Spark apenas processa **novos arquivos** que aparecem nessa pasta monitorada. Se um arquivo for modificado após já ter sido processado, ele não será processado automaticamente. Esse comportamento segue o padrão de uso com o checkpoint para garantir consistência no consumo de dados. ⚠️
+
 ## 👩‍💻 Sobre mim
 
 Case desenvolvido por Raquel Elias Zanatta Banuth para a vaga de Data Analytics Engineer 
