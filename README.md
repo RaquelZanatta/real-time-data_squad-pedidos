@@ -35,6 +35,8 @@ Lê os dados em tempo real do Event Hub, processa e armazena em Delta Lake.
 - Azure Monitor (notificações)
 - APIs para integrações
 
+> ⚠️ Por se tratar de um case técnico sem acesso ao ambiente real do Azure Databricks, a ingestão foi simulada com leitura de arquivos JSON em um diretório, eu criei uma pasta de input na minha máquina, salvei alguns arquivos .json com estrutura semelhante ao schema que coloquei no arquivo abaixo e copiei esses arquivos aos poucos para a pasta (testei com cerca de 40 segundos) para simular eventos chegando. Essa abordagem reproduz o comportamento de streaming com base na chegada de arquivos e permite testar a logica de transformação e escrita de dados de forma que seja minimamente parecida com o ambiente real ⚠️
+
 ## 💻 Exemplo de Código
 
 Arquivo stream_ingestao_pedidos.py: exemplo de leitura do Event Hub e gravação em Delta Lake com PySpark.
