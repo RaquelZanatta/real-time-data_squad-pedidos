@@ -41,6 +41,12 @@ Arquivo stream_ingestao_pedidos.py: exemplo de leitura do Event Hub e gravação
 
 [.....](code/stream_ingestao_pedidos.py)
 
+## 🧩 O que meu código precisa fazer 🧩
+- *1*: *Conectar ao Event hub* (simulado)
+- *2*: *Ler os dados em tempo real* (com Structured Streaming)
+- *3*: *Converter os dados de JSON para colunas*
+- *4*: *Gravar no delta lake* (camada bronze, dados raw)
+
 ## ⚙️ Stack de Tecnologias
 
 | Componente            | Tecnologia                | Justificativa |
