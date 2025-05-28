@@ -12,7 +12,7 @@ A solução proposta contem:
 - Armazenamento no Delta Lake em três camadas (Bronze, Silver e Gold)
 - Consumo dos dados via dashboards (Power BI), alertas (Azure Monitor) ou APIs
 
-![Diagrama da Solução](docs/Raquel_diagrama.pdf)
+! [Diagrama da Solução](docs/Raquel_diagrama.pdf)
 
 ## 🏗️ Arquitetura
 
